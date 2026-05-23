@@ -1,0 +1,19 @@
+{
+  "name": "Block Blast",
+  "short_name": "Block Blast",
+  "description": "Trò chơi Block Blast tối ưu cho điện thoại",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0a0e27",
+  "theme_color": "#0a0e27",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

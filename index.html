@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0a0e27">
+    <meta name="description" content="Trò chơi Block Blast HTML5">
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="icon.svg">
+    <title>Block Blast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="score-board">
+                <div class="score-item">
+                    <span class="label">Score</span>
+                    <span class="value" id="score">0</span>
+                </div>
+                <div class="score-item combo-item" id="comboItem">
+                    <span class="label">Combo</span>
+                    <span class="value combo-value" id="comboStreak">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">High</span>
+                    <span class="value" id="highScore">0</span>
+                </div>
+            </div>
+
+        </header>
+
+        <main>
+        <!-- Game Board -->
+        <div class="game-board">
+            <canvas id="gameCanvas" aria-label="Game board" role="img">Trình duyệt của bạn không hỗ trợ HTML5 Canvas.</canvas>
+            <div class="grid-overlay" id="gridOverlay"></div>
+        </div>
+
+        <!-- Queue Section -->
+        <div class="queue-section">
+            <div class="queue-label">Next Blocks</div>
+            <div class="queue-container" id="queueContainer">
+                <div class="block-slot" id="slot0"></div>
+                <div class="block-slot" id="slot1"></div>
+                <div class="block-slot" id="slot2"></div>
+            </div>
+        </div>
+        </main>
+
+        <!-- Game Over Modal -->
+        <div class="modal" id="gameOverModal">
+            <div class="modal-content">
+                <h2>Game Over</h2>
+                <p>Your Score: <span id="finalScore">0</span></p>
+                <p>High Score: <span id="finalHighScore">0</span></p>
+                <button class="btn-restart" id="restartBtn">Play Again</button>
+            </div>
+        </div>
+
+        <!-- Pause Button -->
+        <div class="controls">
+            <button class="btn-control" id="pauseBtn">Pause</button>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
